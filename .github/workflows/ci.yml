@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
+
+      - name: 🔧 Setup NPM and Install Dependencies
+        uses: ./.github/actions/setup-npm
+
+      - name: 💅 Format and Lint Checks
+        run: pnpm format:check
+
+      #   - name: 🔬 Run Tests
+      #     run: pnpm test
+
+      - name: ⛏️ Build
+        run: pnpm build
