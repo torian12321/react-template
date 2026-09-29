@@ -5,7 +5,7 @@ inputs:
   node-version:
     description: 'Node.js version to use'
     required: false
-    default: 'lts/*'
+    default: lts/*
   registry-url:
     description: 'NPM registry URL (e.g., https://npm.pkg.github.com)'
     required: false
