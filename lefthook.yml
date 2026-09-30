@@ -1,0 +1,5 @@
+pre-commit:
+  jobs:
+    - name: format and lint
+      run: npm run format
+      stage_fixed: true

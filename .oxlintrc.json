@@ -3,6 +3,7 @@
   "plugins": ["react", "typescript", "oxc", "import"],
   "jsPlugins": ["eslint-plugin-no-inline-styles"],
   "rules": {
+    "no-fallthrough": "error",
     "no-console": "warn",
     "no-warning-comments": [
       "warn",

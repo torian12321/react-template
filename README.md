@@ -33,3 +33,15 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+### Git hooks (lefthook)
+
+Frontend pre-commit hooks run oxlint and oxfmt on staged files, so lint/format issues are caught before CI.
+
+Hooks install automatically via lefthook’s postinstall when you run `pnpm install` (skipped in CI).
+
+If hooks are missing locally:
+
+```sh
+pnpm exec lefthook install
+```
